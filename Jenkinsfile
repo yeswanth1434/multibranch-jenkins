@@ -8,13 +8,17 @@ pipeline {
             }
         }
         stage('git checkout') {
+<<<<<<< HEAD
             when{
                 branch 'feature'
             }
+=======
+>>>>>>> 7b65ec8c6c2aa7bd5341d22c801354aacf8ac027
             steps {
                 git branch: 'main', credentialsId: 'git-creds', url: 'https://github.com/yeswanth1434/multibranch-jenkins'
             }
         }
+<<<<<<< HEAD
         stage('maven build') {
             when{
                 branch 'devlop'
@@ -39,5 +43,7 @@ pipeline {
                 echo "Deploying to production"
             }
         }
+=======
+>>>>>>> 7b65ec8c6c2aa7bd5341d22c801354aacf8ac027
     }
 }
