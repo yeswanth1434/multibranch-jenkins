@@ -9,7 +9,7 @@ pipeline {
         }
         stage('git checkout') {
             when{
-                branch 'feature'
+                branch 'feature1'
             }
             steps {
                 git branch: 'main', credentialsId: 'git-creds', url: 'https://github.com/yeswanth1434/multibranch-jenkins'
@@ -20,7 +20,7 @@ pipeline {
                 branch 'devlop'
             }
             steps {
-                sh"mvn clean package"
+                sh "mvn clean package"
             }
         }
         stage('Tomcat Deploy - devlop') {
